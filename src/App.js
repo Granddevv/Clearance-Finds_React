@@ -9,24 +9,31 @@ import Row from "reactstrap/lib/Row";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.goods = {goods: null};
+    //this.goods = null
+    this.state = {
+      isLoaded: false,
+      isLoading: false,
+      data: {},
+    };
     console.log('marker');
-    console.log(this.goods);
+    //console.log(this.goods);
   };
 
   componentWillMount() {
-    this.goods = async function() {
+    var goods = async function() {
       const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
 
       const data = await res.json();
 
       console.log(`Show data fetched. Count: ${data.length}`);
-      return {
-          goods: data
-      };
+      return data;
     };
-    this.setState({data: this.goods});
-    console.log(this.goods);
+    this.setState({
+      isLoaded: true
+      isLoading: true
+      data: goods
+    });
+    console.log('state set');
   };
 
   //if(this.goods) {
@@ -52,20 +59,24 @@ class App extends React.Component {
     const handleSearch = (data) => {
         //data = manipulateImage(data);
         //setGoods(data);
-        this.goods = data;
+        this.state.data = data;
     };
 
     const handleNextPage = (data) => {
         //data = manipulateImage(data);
-        let newGoods = this.goods.concat(data);
+        let newGoods = this.state.data.concat(data);
         //setGoods(newGoods);
-        this.goods = newGoods;
+        this.state.data = newGoods;
     };
+
+    if (!this.state.isLoaded){
+        return <div>Loading...</div>
+    }
 
     return (
         <Layout handleSearch={handleSearch} handleNextPage={handleNextPage}>
             <Row>
-            {this.goods.map(g => (
+            {this.state.data.map(g => (
                 <Col lg={4} md={6} sm={4} key={g.id}>
                     <Card>
                         <CardImg top src={g.picture} style={imgStyle}></CardImg>
