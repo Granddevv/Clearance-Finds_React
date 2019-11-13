@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch';
 import {Card, CardBody, CardImg, CardTitle, Col} from "reactstrap";
 import Row from "reactstrap/lib/Row";
 
-if(this.props.goods) {
+
 const App = (props) => {
     const manipulateImage = (gs) => {
     /*
@@ -43,7 +43,8 @@ const App = (props) => {
         data = manipulateImage(data);
         let newGoods = goods.concat(data);
         setGoods(newGoods);
-    }
+    };
+    if(props.goods) {
     return (
         <Layout handleSearch={handleSearch} handleNextPage={handleNextPage}>
             <Row>
@@ -66,8 +67,10 @@ const App = (props) => {
             </Row>
         </Layout>
     )
+    };
+    else return (<div />)
 };
-};
+
 App.getInitialProps = async function () {
     const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
 
