@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch';
 import {Card, CardBody, CardImg, CardTitle, Col} from "reactstrap";
 import Row from "reactstrap/lib/Row";
 
-
+if(this.props.goods) {
 const App = (props) => {
     const manipulateImage = (gs) => {
     /*
@@ -78,5 +78,5 @@ App.getInitialProps = async function () {
         goods: data
     };
 };
-
+};
 export default App;
