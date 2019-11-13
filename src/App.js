@@ -67,8 +67,7 @@ const App = (props) => {
             </Row>
         </Layout>
     )
-    };
-    else return (<div />)
+  } else { return (<div />) };
 };
 
 App.getInitialProps = async function () {
