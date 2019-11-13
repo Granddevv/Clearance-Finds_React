@@ -10,6 +10,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.goods = {goods: null};
+    console.log('marker');
+    console.log(this.goods);
   };
 
   async componentDidMount() {
@@ -26,8 +28,6 @@ class App extends React.Component {
     console.log(this.goods);
   };
 
-  console.log('marker');
-  console.log(this.gooods);
   //if(this.goods) {
   render() {
     /*
