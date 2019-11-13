@@ -29,9 +29,9 @@ class App extends React.Component {
       return data;
     };
     this.setState({
-      isLoaded: true
-      isLoading: true
-      data: goods
+      isLoaded: true,
+      isLoading: true,
+      data: goods,
     });
     console.log('state set');
   };
