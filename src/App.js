@@ -7,7 +7,7 @@ import {Card, CardBody, CardImg, CardTitle, Col} from "reactstrap";
 import Row from "reactstrap/lib/Row";
 
 
-const Index = (props) => {
+const App = (props) => {
     const manipulateImage = (gs) => {
     /*
         for (let g of gs) {
@@ -68,7 +68,7 @@ const Index = (props) => {
     )
 };
 
-Index.getInitialProps = async function () {
+App.getInitialProps = async function () {
     const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
 
     const data = await res.json();
