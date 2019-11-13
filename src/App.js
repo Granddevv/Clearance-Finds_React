@@ -12,7 +12,7 @@ class App extends React.Component {
     this.goods = {goods: null};
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     this.goods = async function() {
       const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
 
@@ -26,6 +26,8 @@ class App extends React.Component {
     console.log(this.goods);
   };
 
+  console.log('marker');
+  console.log(this.gooods);
   //if(this.goods) {
   render() {
     /*
