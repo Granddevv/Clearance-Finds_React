@@ -14,7 +14,7 @@ class App extends React.Component {
     console.log(this.goods);
   };
 
-  async componentDidMount() {
+  componentWillMount() {
     this.goods = async function() {
       const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
 
@@ -25,6 +25,7 @@ class App extends React.Component {
           goods: data
       };
     };
+    this.setState({data: this.goods});
     console.log(this.goods);
   };
 
