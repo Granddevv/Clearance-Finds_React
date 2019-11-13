@@ -67,7 +67,7 @@ const App = (props) => {
         </Layout>
     )
 };
-
+};
 App.getInitialProps = async function () {
     const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
 
@@ -78,5 +78,5 @@ App.getInitialProps = async function () {
         goods: data
     };
 };
-};
+
 export default App;
