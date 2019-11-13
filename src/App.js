@@ -45,19 +45,18 @@ class App extends React.Component {
 
     //const gg = manipulateImage(this.goods);
     //const [goods, setGoods] = useState(gg);
-    setGoods(gg) {
-      this.goods = gg;
-    };
 
     const handleSearch = (data) => {
         //data = manipulateImage(data);
-        setGoods(data);
+        //setGoods(data);
+        this.goods = data;
     };
 
     const handleNextPage = (data) => {
         //data = manipulateImage(data);
         let newGoods = this.goods.concat(data);
-        setGoods(newGoods);
+        //setGoods(newGoods);
+        this.goods = newGoods;
     };
 
     return (
