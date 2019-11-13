@@ -20,6 +20,7 @@ class App extends React.Component {
   };
 
   componentWillMount() {
+    /*
     var goods = async function() {
       const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
 
@@ -28,13 +29,38 @@ class App extends React.Component {
       console.log(`Show data fetched. Count: ${data.length}`);
       return data;
     };
+    */
     this.setState({
-      isLoaded: true,
+      isLoaded: false,
       isLoading: true,
-      data: goods,
+      data: {},
     });
-    console.log('state set');
+    console.log('state set to isloading');
   };
+
+  componentDidMount() {
+    fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods')
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            isLoading: false,
+            data: result
+          });
+          console.log('state set to isLoaded');
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+  }
 
   //if(this.goods) {
   render() {
