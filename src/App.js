@@ -28,10 +28,11 @@ class App extends React.Component {
 
   //if(this.goods) {
   render() {
+    /*
     const manipulateImage = (gs) => {
         return gs;
     };
-
+    */
     const imgStyle = {
       //flex: 1,
       //aspectRatio: 1.5,
@@ -42,16 +43,19 @@ class App extends React.Component {
       resizeMode: 'contain'
     };
 
-    const gg = manipulateImage(this.goods);
-    const [goods, setGoods] = useState(gg);
+    //const gg = manipulateImage(this.goods);
+    //const [goods, setGoods] = useState(gg);
+    setGoods(gg) {
+      this.goods = gg;
+    };
 
     const handleSearch = (data) => {
-        data = manipulateImage(data);
+        //data = manipulateImage(data);
         setGoods(data);
     };
 
     const handleNextPage = (data) => {
-        data = manipulateImage(data);
+        //data = manipulateImage(data);
         let newGoods = this.goods.concat(data);
         setGoods(newGoods);
     };
@@ -59,7 +63,7 @@ class App extends React.Component {
     return (
         <Layout handleSearch={handleSearch} handleNextPage={handleNextPage}>
             <Row>
-            {goods.map(g => (
+            {this.goods.map(g => (
                 <Col lg={4} md={6} sm={4} key={g.id}>
                     <Card>
                         <CardImg top src={g.picture} style={imgStyle}></CardImg>
