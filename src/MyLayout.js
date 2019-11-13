@@ -58,11 +58,11 @@ const Layout = (props) => {
         setQuery(q);
     }
 
-    useEffect(() => {
+    useEffect(() => {// eslint-disable-next-line
         if (leftMenu) {
-            setLeftMenu(false);
+            setLeftMenu(false);// eslint-disable-next-line
             searchWithoutEvent();
-        }
+        }// eslint-disable-next-line
     }, [searchQuery]);
 
     const nextPage = (event) => {
