@@ -39,7 +39,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods')
+    fetch('https://superclearance.us-east-2.elasticbeanstalk.com/goods')
       .then(res => res.json())
       .then(
         (result) => {
