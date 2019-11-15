@@ -43,7 +43,7 @@ const Layout = (props) => {
     };
 
     const searchWithoutEvent = () => {
-        fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods?q=' + searchQuery).then(function (response) {
+        fetch('https://superclearance.us-east-2.elasticbeanstalk.com/goods?q=' + searchQuery).then(function (response) {
             response.json().then(data => {
                 props.handleSearch(data);
                 setPage(1);
@@ -66,7 +66,7 @@ const Layout = (props) => {
     }, [searchQuery]);
 
     const nextPage = (event) => {
-        let url = 'http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods?page=' + (page + 1);
+        let url = 'https://superclearance.us-east-2.elasticbeanstalk.com/goods?page=' + (page + 1);
         if (searchQuery.length > 0) url += "&q=" + searchQuery;
         fetch(url).then(function (response) {
             response.json().then(data => {
