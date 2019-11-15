@@ -78,7 +78,7 @@ const Layout = (props) => {
     return (
         <div>
             <Navbar color="dark" dark expand="md">
-                <NavbarBrand href="/">Price Hunter</NavbarBrand>
+                <NavbarBrand href="/">Clearance Finds</NavbarBrand>
                 <NavbarToggler onClick={toggle}/>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
@@ -111,7 +111,7 @@ const Layout = (props) => {
             <Container>
                 <Row>
                     <Col lg="3">
-                        <h1 className="my-4">Shop Name</h1>
+                        <h1 className="my-4">Categories</h1>
                         <ListGroup>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Halloween'}>Halloween</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Shoes'}>Shoes</ListGroupItem>
