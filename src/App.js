@@ -85,14 +85,23 @@ class App extends React.Component {
     const handleSearch = (data) => {
         //data = manipulateImage(data);
         //setGoods(data);
-        this.state.data = data;
+        this.setState({
+          isLoaded: true,
+          isLoading: false,
+          data: data
+        });
     };
 
     const handleNextPage = (data) => {
         //data = manipulateImage(data);
-        let newGoods = this.state.data.concat(data);
+        let pre = this.state.data;
+        let newGoods = pre.concat(data);
         //setGoods(newGoods);
-        this.state.data = newGoods;
+        this.setState({
+          isLoaded: true,
+          isLoading: false,
+          data: newGoods
+        });
     };
 
     if (!this.state.isLoaded){
