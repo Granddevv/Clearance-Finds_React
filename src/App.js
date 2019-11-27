@@ -121,7 +121,7 @@ class App extends React.Component {
                             </CardTitle>
                             <h5 style={{color: 'red'}}>${g.price}</h5><strike
                             style={{color: 'grey'}}>${g.regPrice}</strike>
-                            &nbsp;&nbsp;<span>{g.seller.name}</span>
+                            &nbsp;&nbsp;<span>{g.seller_id}</span>
                         </CardBody>
                     </Card>
 
