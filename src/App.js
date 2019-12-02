@@ -71,8 +71,8 @@ class App extends React.Component {
       //aspectRatio: 1.5,
       //minWidth: 500,
       maxWidth: 500,
-      minHeight: 300,
-      maxHeight: 400,
+      minHeight: 350,
+      maxHeight: 350,
       resizeMode: 'contain'
     };
 
@@ -108,7 +108,7 @@ class App extends React.Component {
             {this.state.data.map(g => (
                 <Col lg={4} md={6} sm={4} key={g.id}>
                     <Card>
-                        <CardImg top src={g.picture} style={imgStyle}></CardImg>
+                        <CardImg top src={g.picture}></CardImg>
                         <CardBody>
                             <CardTitle tag="h4">
                                 <a href={g.link}>{g.name}</a>
