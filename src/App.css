@@ -20,3 +20,9 @@
 .App-link {
   color: #09d3ac;
 }
+
+.card-title {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
