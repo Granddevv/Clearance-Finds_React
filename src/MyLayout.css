@@ -1,4 +1,12 @@
 .list-group-item {
-  background: red;
+  background: white;
   border-radius: 8px;
+}
+
+.bg {
+  background-image: url("./bubbles.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

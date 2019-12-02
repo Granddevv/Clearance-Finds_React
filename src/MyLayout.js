@@ -77,7 +77,7 @@ const Layout = (props) => {
         });
     };
     return (
-        <div>
+        <div className='bg'>
             <Navbar color="dark" dark expand="md">
                 <NavbarBrand href="/">Clearance Finds</NavbarBrand>
                 <NavbarToggler onClick={toggle}/>
