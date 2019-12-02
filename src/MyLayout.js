@@ -83,29 +83,6 @@ const Layout = (props) => {
                 <NavbarToggler onClick={toggle}/>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="https://github.com/uuganbold/clearance-goods">GitHub</NavLink>
-                        </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                Options
-                            </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    Option 1
-                                </DropdownItem>
-                                <DropdownItem>
-                                    Option 2
-                                </DropdownItem>
-                                <DropdownItem divider/>
-                                <DropdownItem>
-                                    Reset
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
                     </Nav>
                 </Collapse>
             </Navbar>
@@ -152,7 +129,7 @@ const Layout = (props) => {
 
             <footer className="py-5 bg-dark">
                 <div className="container">
-                    <p className="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+                    <p className="m-0 text-center text-white">Copyright &copy; Clearancefinds 2019</p>
                 </div>
             </footer>
         </div>
