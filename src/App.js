@@ -5,6 +5,7 @@ import './shop-homepage.css';
 import fetch from 'isomorphic-unfetch';
 import {Card, CardBody, CardImg, CardTitle, Col} from "reactstrap";
 import Row from "reactstrap/lib/Row";
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
