@@ -97,7 +97,6 @@ const Layout = (props) => {
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Kids'}>Kids</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Clothing'}>Clothing</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Beauty'}>Beauty</ListGroupItem>
-                            <ListGroupItem onClick={handleLeftMenu} data-query={'Holiday'}>Holidays</ListGroupItem>
                         </ListGroup>
                     </Col>
                     <Col lg="9">
