@@ -91,14 +91,13 @@ const Layout = (props) => {
                     <Col lg="3">
                         <h1 className="my-4">Categories</h1>
                         <ListGroup>
-                            <ListGroupItem onClick={handleLeftMenu} data-query={'Halloween'}>Halloween</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Shoes'}>Shoes</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Women'}>Women</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Men'}>Men</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Kids'}>Kids</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Clothing'}>Clothing</ListGroupItem>
                             <ListGroupItem onClick={handleLeftMenu} data-query={'Beauty'}>Beauty</ListGroupItem>
-
+                            <ListGroupItem onClick={handleLeftMenu} data-query={'Holiday'}>Holidays</ListGroupItem>
                         </ListGroup>
                     </Col>
                     <Col lg="9">

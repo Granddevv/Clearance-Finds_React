@@ -30,3 +30,7 @@
   background-size: cover;
   */
 }
+
+body {
+   margin:0;
+}
