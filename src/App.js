@@ -10,27 +10,15 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    //this.goods = null
     this.state = {
       isLoaded: false,
       isLoading: false,
       data: {},
     };
     console.log('marker');
-    //console.log(this.goods);
   };
 
   componentWillMount() {
-    /*
-    var goods = async function() {
-      const res = await fetch('http://clearancegood-env.xe4i3r2rmx.us-east-2.elasticbeanstalk.com/goods');
-
-      const data = await res.json();
-
-      console.log(`Show data fetched. Count: ${data.length}`);
-      return data;
-    };
-    */
     this.setState({
       isLoaded: false,
       isLoading: true,
@@ -51,9 +39,6 @@ class App extends React.Component {
           });
           console.log('state set to isLoaded');
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           this.setState({
             isLoaded: true,
@@ -63,7 +48,6 @@ class App extends React.Component {
       )
   }
 
-  //if(this.goods) {
   render() {
 
     const imgStyle = {
